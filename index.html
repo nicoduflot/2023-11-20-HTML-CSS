@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,13 +9,14 @@
     <!-- Commentaire en HTML : ATTENTION ces commentaires sont visible par les visiteurs -->
     <!-- C'est dans l'entête où l'on va appeler les liens vers les fichiers de style ou de script javascript -->
     <style>
-        .rouge-gras{
+        .rouge-gras {
             font-weight: bold;
             color: red;
         }
     </style>
     <link rel="stylesheet" href="./css/style.css" media="screen" />
 </head>
+
 <body>
     <header>
         <div>
@@ -44,7 +46,7 @@
                 </header>
                 <h3>Balises générales de contenu</h3>
                 <p>
-                    Généralement, tous les contenus de type texte sont a mettre dans des balises de type paragraphe. 
+                    Généralement, tous les contenus de type texte sont a mettre dans des balises de type paragraphe.
                     Il n'existe pas que la balise <code>&lt;p&gt;&lt;/p&gt;</code>
                 </p>
                 <p>
@@ -53,7 +55,8 @@
                 <ul>
                     <li>
                         Block : <br />
-                        La balise prend tout l'espace en largeur, et ne peut pas contenir d'autres balise de contenu de type block, sauf si on le contre-indique en CSS.
+                        La balise prend tout l'espace en largeur, et ne peut pas contenir d'autres balise de contenu de
+                        type block, sauf si on le contre-indique en CSS.
                     </li>
                     <li>
                         Inline : <br />
@@ -91,10 +94,16 @@ rerum molestiae et!
                     Il existe des balise de type inline pour modifier l'apparence du texte.
                 </p>
                 <p>
-                    Par exemple, la balise usuelle pour du <b>gras</b>, on utilise <code>&lt;b&gt;</code>, mais si le texte mis en gras a un importance sur la pertinence au niveau du SEO, on utilisera <code>&lt;strong&gt;</code>. <strong>C'est important</strong>. Le même type de comportement est a noté entre <i>l'italique</i> <code>&lt;i&gt;</code> et <em>l'emphase</em> <code>&lt;em&gt;</code>.
+                    Par exemple, la balise usuelle pour du <b>gras</b>, on utilise <code>&lt;b&gt;</code>, mais si le
+                    texte mis en gras a un importance sur la pertinence au niveau du SEO, on utilisera
+                    <code>&lt;strong&gt;</code>. <strong>C'est important</strong>. Le même type de comportement est a
+                    noté entre <i>l'italique</i> <code>&lt;i&gt;</code> et <em>l'emphase</em> <code>&lt;em&gt;</code>.
                 </p>
                 <p>
-                    Autrefois, pour changer la couleur, mapolice et la taille d'un extraît de texte, on utilisait la la balise <code>&lt;font&gt;</code>. Un <font color="ff0000" face="impact" size="5">exemple</font>, maintenant on créera plutôt une classe que l'on appelera dans lune balise &lt;span&gt; comme <span class="rouge-gras">ceci</span>.
+                    Autrefois, pour changer la couleur, mapolice et la taille d'un extraît de texte, on utilisait la la
+                    balise <code>&lt;font&gt;</code>. Un <font color="ff0000" face="impact" size="5">exemple</font>,
+                    maintenant on créera plutôt une classe que l'on appelera dans lune balise &lt;span&gt; comme <span
+                        class="rouge-gras">ceci</span>.
                 </p>
                 <p>
                     D'autres balises sur le texte, comme : <br />
@@ -109,62 +118,84 @@ rerum molestiae et!
                     <h2>Les tableaux en HTML</h2>
                 </header>
                 <!-- table>((thead>tr>th*6)+(tbody>tr*4>(th{$}+td*5))+(tfoot>tr>th*6)) -->
-                <table>
-                    <thead>
-                        <tr>
-                            <th>N° du classement</th>
-                            <th>Nom du jeu</th>
-                            <th>Éditeur</th>
-                            <th>Développeur</th>
-                            <th>Année de sortie</th>
-                            <th>Prix de sortie</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>1</th>
-                            <td>Duke Nukem 3d</td>
-                            <td>Apogee Software</td>
-                            <td>3d realms</td>
-                            <td>1996</td>
-                            <td>250 fr</td>
-                        </tr>
-                        <tr>
-                            <th>2</th>
-                            <td>Shadow warrior</td>
-                            <td>Apogee software</td>
-                            <td>3d software</td>
-                            <td>1997</td>
-                            <td>250 fr</td>
-                        </tr>
-                        <tr>
-                            <th>3</th>
-                            <td>Carmageddon</td>
-                            <td>Interplay</td>
-                            <td>Stainless games</td>
-                            <td>1997</td>
-                            <td>200 fr</td>
-                        </tr>
-                        <tr>
-                            <th>4</th>
-                            <td>Carmageddon II</td>
-                            <td>Sales curve interactive</td>
-                            <td>Stainless games</td>
-                            <td>1998</td>
-                            <td>250 fr</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>N° du classement</th>
-                            <th>Nom du jeu</th>
-                            <th>Éditeur</th>
-                            <th>Développeur</th>
-                            <th>Année de sortie</th>
-                            <th>Prix de sortie</th>
-                        </tr>
-                    </tfoot>
-                </table>
+                <div class="fit-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>N° du classement</th>
+                                <th>Nom du jeu</th>
+                                <th>Éditeur</th>
+                                <th>Développeur</th>
+                                <th>Année de sortie</th>
+                                <th>Prix de sortie</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td>Duke Nukem 3d</td>
+                                <td>Apogee Software</td>
+                                <td>3d realms</td>
+                                <td>1996</td>
+                                <td>250 fr</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>Shadow warrior</td>
+                                <td>Apogee software</td>
+                                <td>3d software</td>
+                                <td>1997</td>
+                                <td>250 fr</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>Carmageddon</td>
+                                <td>Interplay</td>
+                                <td>Stainless games</td>
+                                <td>1997</td>
+                                <td>200 fr</td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td>Carmageddon II</td>
+                                <td>Sales curve interactive</td>
+                                <td>Stainless games</td>
+                                <td>1998</td>
+                                <td>250 fr</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>N° du classement</th>
+                                <th>Nom du jeu</th>
+                                <th>Éditeur</th>
+                                <th>Développeur</th>
+                                <th>Année de sortie</th>
+                                <th>Prix de sortie</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </article>
+            <article>
+                <header>
+                    <h2>Comportements CSS de "base"</h2>
+                </header>
+                <h3>La largeur des éléments</h3>
+                <p>
+                    Quand on indique un largeur à un élément, de base, c'est le contenu qui est prix en compte, et pas
+                    le contenu + marges intérieurs si elles existe ni la largeur des bordures si elles existent.
+                </p>
+                <div class="content-width">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum commodi placeat enim cumque
+                    distinctio et beatae maxime nulla rerum officiis rem repellat magnam, in deleniti, laudantium veniam
+                    quasi perspiciatis!
+                </div>
+                <div class="border-width">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque qui cupiditate, placeat facere
+                    dignissimos non incidunt earum id corporis porro quis ipsam vitae eligendi, vero nam alias nihil
+                    ratione ipsa.
+                </div>
             </article>
         </section>
     </main>
@@ -204,4 +235,5 @@ rerum molestiae et!
         </div>
     </footer>
 </body>
+
 </html>
