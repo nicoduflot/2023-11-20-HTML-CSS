@@ -7,6 +7,12 @@
     <meta name="descritpion" content="Formation HTML5 CSS3 | Responsive Web Design" />
     <!-- Commentaire en HTML : ATTENTION ces commentaires sont visible par les visiteurs -->
     <!-- C'est dans l'entête où l'on va appeler les liens vers les fichiers de style ou de script javascript -->
+    <style>
+        .rouge-gras{
+            font-weight: bold;
+            color: red;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -35,8 +41,69 @@
                 <header>
                     <h2>Introduction</h2>
                 </header>
-                
+                <h3>Balises générales de contenu</h3>
+                <p>
+                    Généralement, tous les contenus de type texte sont a mettre dans des balises de type paragraphe. 
+                    Il n'existe pas que la balise <code>&lt;p&gt;&lt;/p&gt;</code>
+                </p>
+                <p>
+                    Il existe deux type de balise de contenu :
+                </p>
+                <ul>
+                    <li>
+                        Block : <br />
+                        La balise prend tout l'espace en largeur, et ne peut pas contenir d'autres balise de contenu de type block, sauf si on le contre-indique en CSS.
+                    </li>
+                    <li>
+                        Inline : <br />
+                        Ces balises "entourent" le texte, sans générer (sauf contre-indication) de marge, d'espace, etc.
+                    </li>
+                </ul>
+                <p>
+                    Au niveau des balises block :
+                </p>
+                <blockquote>
+                    <q>Alea Jacta Est</q><br />
+                    <cite>Jules César</cite>
+                </blockquote>
+                <pre>
+Lorem, ipsum dolor sit amet 
+consectetur adipisicing elit. 
+Reiciendis dolor doloribus aut 
+recusandae alias in totam quas 
+esse expedita repellendus 
+voluptas suscipit, sint optio 
+consequuntur, odit minima 
+rerum molestiae et!
+                </pre>
+                <footer>
+                    <a href="./article.html" title="lien vers l'article">
+                        <button role="link">Lire +</button>
+                    </a>
+                </footer>
             </article>
+            <article>
+                <header>
+                    <h2>Balises sur le texte</h2>
+                </header>
+                <p>
+                    Il existe des balise de type inline pour modifier l'apparence du texte.
+                </p>
+                <p>
+                    Par exemple, la balise usuelle pour du <b>gras</b>, on utilise <code>&lt;b&gt;</code>, mais si le texte mis en gras a un importance sur la pertinence au niveau du SEO, on utilisera <code>&lt;strong&gt;</code>. <strong>C'est important</strong>. Le même type de comportement est a noté entre <i>l'italique</i> <code>&lt;i&gt;</code> et <em>l'emphase</em> <code>&lt;em&gt;</code>.
+                </p>
+                <p>
+                    Autrefois, pour changer la couleur, mapolice et la taille d'un extraît de texte, on utilisait la la balise <code>&lt;font&gt;</code>. Un <font color="ff0000" face="impact" size="5">exemple</font>, maintenant on créera plutôt une classe que l'on appelera dans lune balise &lt;span&gt; comme <span class="rouge-gras">ceci</span>.
+                </p>
+                <p>
+                    D'autres balises sur le texte, comme : <br />
+                    <s>texte biffé</s><br />
+                    <u>Texte souligne (ATTENTION : CE N'EST PAS UN LIEN => c'est déconseillé)</u><br />
+                    <mark>texte surligné (stabylo boss style) jaune fluo</mark><br />
+                    H<sub>2</sub>SO<sub>4</sub><sup>2-</sup><br />
+                </p>
+            </article>
+            
         </section>
     </main>
     <footer>
