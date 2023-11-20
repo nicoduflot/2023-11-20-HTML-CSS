@@ -1,0 +1,37 @@
+
+/*
+dimension les plus vues en web :
+px      =>  Pixel
+em      =>  cadratin : unité de mesure en print sur les presses
+            le cadratin se calcul par rapport à son parent
+rem     =>  cadratin racine : se calcul par rapport à la taille racine de police
+%       =>  pourcentage, se calcule par rapport à l'élément qui le contient
+vw & vh =>  viewport width & viewport height : correspond à la taille 
+            d'affichage de la page en largeur et en hauteur
+            si affichage en largeur 768px alors 20vw = 153.6 px
+
+si 2em = 32 px, 1em = 16px
+
+*/
+
+:root{
+    /* root permet de surcharger le comportement par défaut du navigateur */
+    /* css permet d'utiliser des variable, et elles peuvent êtrz géréeet / ou précalculée dans le root */
+    --font-family: Arial, Helvetica, sans-serif;
+    --heading-font: impact;
+    font-family: var(--font-family);
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: var(--heading-font);
+    line-height: 2.5rem;
+    margin: 0;
+    letter-spacing: 1px;
+}

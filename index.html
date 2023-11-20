@@ -13,6 +13,7 @@
             color: red;
         }
     </style>
+    <link rel="stylesheet" href="./css/style.css" media="screen" />
 </head>
 <body>
     <header>
@@ -103,7 +104,68 @@ rerum molestiae et!
                     H<sub>2</sub>SO<sub>4</sub><sup>2-</sup><br />
                 </p>
             </article>
-            
+            <article>
+                <header>
+                    <h2>Les tableaux en HTML</h2>
+                </header>
+                <!-- table>((thead>tr>th*6)+(tbody>tr*4>(th{$}+td*5))+(tfoot>tr>th*6)) -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>N° du classement</th>
+                            <th>Nom du jeu</th>
+                            <th>Éditeur</th>
+                            <th>Développeur</th>
+                            <th>Année de sortie</th>
+                            <th>Prix de sortie</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>Duke Nukem 3d</td>
+                            <td>Apogee Software</td>
+                            <td>3d realms</td>
+                            <td>1996</td>
+                            <td>250 fr</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>Shadow warrior</td>
+                            <td>Apogee software</td>
+                            <td>3d software</td>
+                            <td>1997</td>
+                            <td>250 fr</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>Carmageddon</td>
+                            <td>Interplay</td>
+                            <td>Stainless games</td>
+                            <td>1997</td>
+                            <td>200 fr</td>
+                        </tr>
+                        <tr>
+                            <th>4</th>
+                            <td>Carmageddon II</td>
+                            <td>Sales curve interactive</td>
+                            <td>Stainless games</td>
+                            <td>1998</td>
+                            <td>250 fr</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>N° du classement</th>
+                            <th>Nom du jeu</th>
+                            <th>Éditeur</th>
+                            <th>Développeur</th>
+                            <th>Année de sortie</th>
+                            <th>Prix de sortie</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </article>
         </section>
     </main>
     <footer>
