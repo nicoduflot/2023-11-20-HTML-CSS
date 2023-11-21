@@ -259,6 +259,24 @@ rerum molestiae et!
                 <source srcset="./images/synthwave-vibe-james-white-signalnoise-w300.png" media="(min-width: 360px)" />
                 <img src="./images/synthwave-vibe-james-white-signalnoise-w300.png" alt="Image au style synthwave, un motard devant sa moto, au fond, un couché de soleil type des posters de films des années 80" />
             </picture>
+            <p>
+                l'attribut srcset n'est pas uniquement utilisé par <code class="balise">source /</code>, il peut être utilisé avec <code class="balise">img /</code> mais nécéssite un attributs supplémentaire : sizes.
+            </p>
+            <figure>
+
+                <img 
+                srcset="./images/james-white-composite-200w.png 200w, 
+                ./images/james-white-composite-400w.png 400w,
+                ./images/james-white-composite-800w.png 800w,
+                ./images/james-white-composite.jpg 1200w"
+                
+                sizes="(max-width: 450px) 200px, (max-width: 850px) 400px, (max-width: 1250px) 800px, 1200px"
+                
+                src="./images/james-white-composite.jpg" alt="image composite des différentes réalisation de l'artiste James White, connu pour son style synthwave" />
+                <figcaption>
+                    Galerie composite des diverses création de <cite>James White</cite>
+                </figcaption>
+            </figure>
         </section>
     </main>
     <footer>
