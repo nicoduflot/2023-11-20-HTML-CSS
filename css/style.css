@@ -72,7 +72,8 @@ a:hover{
     color: var(--link-main-color-hover);
 }
 
-img{
+img,
+video{
     max-width: 100%;
 }
 
