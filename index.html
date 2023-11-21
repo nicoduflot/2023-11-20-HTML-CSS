@@ -304,8 +304,68 @@ rerum molestiae et!
                 <p>
                     Plusieurs façons de l'utiliser, ici on présente les deux principales
                 </p>
+                <p>
+                    On peut utiliser directement la balise <code class="balise">viedo</code> avec l'attribut src à l'intérieur.
+                </p>
                 <figure>
-                    <video src="./media/video/Fallout-4-Launch-Trailer.mp4" controls poster="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg" muted></video>
+                    <video src="./media/video/Fallout-4-Launch-Trailer.mp4" controls poster="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" muted></video>
+                </figure>
+                <p>
+                    Si on veut proposer plusieurs formats de vidéo, afin de s'adapté au navigateur et / ou la bande passante des visiteurs, il est possible de définir plusieurs source de vidéos grace àla balise <code class="balise">source /</code>
+                </p>
+                <figure>
+                    <video controls muted preload="auto">
+                        <source src="./media/video/Big_Buck_Bunny_360_10s_1MB.webm" type="video/webm" />
+                        <source src="./media/video/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4" />
+                    </video>
+                </figure>
+            </article>
+            <article>
+                <header>
+                    <h2>Media : l'audio hébergé</h2>
+                    <p>
+                        La balise <code class="balise">audio</code> fonctionne comme la balise vidéo.
+                    </p>
+                    <figure>
+                        <img src="./images/diablo_02.jpg" alt="Impression écran jeu diablo quand le personnage d'adresse à Cain l'ancien" />
+                        <audio src="./media/audio/diablo_town.mp3" preload="auto" controls></audio>
+                        <figcaption>
+                            <button id="playDiablo">Lecture / pause</button>
+                        </figcaption>
+                    </figure>
+                </header>
+            </article>
+        </section>
+        <section>
+            <article>
+                <header>
+                    <h2>Les iframes</h2>
+                </header>
+                <p>
+                    L'iframe est un cadre défini, qui permet d'afficher à l'intérieur un document (page web, vidéo, pdf, txt, etc.)
+                </p>
+                <ul>
+                    <li><a href="./documents/CRAM.pdf" target="documents">Cram.pdf</a></li>
+                    <li><a href="./documents/books.xml" target="documents">Books.xml</a></li>
+                </ul>
+                <figure class="ratio ratio-a4-portrait">
+                    <iframe name="documents" width="100%" height="300" src="./documents/A4-portrait-hex-0.5-inches-paper.pdf"></iframe>
+                </figure>
+            </article>
+            <article>
+                <header>
+                    <h2>Media : vidéos hébregées sur un site tier</h2>
+                </header>
+                <p>
+                    Les sites de streaming - vidéo (youtube, dailymotion, viméo, etc.) propose les partage de leurs vidéos. Pour ce faire il fournissent la plupart du temps un bout de code html contenant une iframe et un lien vers la ressources sur une partie patageable du site.
+                </p>
+                <h3>youtube</h3>
+                <figure class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/HJWFsZ_YUc4?si=VWRL_43zq__rIw9P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </figure>
+                <h3>Dailymotion</h3>
+                <figure class="ratio ratio-16x9">
+                    <iframe frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x2ehnj" width="100%" height="100%" allowfullscreen title="Dailymotion Video Player" ></iframe>
                 </figure>
             </article>
         </section>
