@@ -46,6 +46,7 @@ si 2em = 32 px, 1em = 16px
 
 h1{
     color: var(--header-title-color);
+    text-align: center;
 }
 
 h1,
@@ -114,18 +115,35 @@ body > nav ul{
     line-height: 2.2rem;
 }
 
-body > nav a{
-    display: block;
-    color: var(--link-nav-main-color);
+body > nav ul li:not(body > nav ul li:last-child){
+    border-bottom: 1px solid var(--link-nav-main-color);
 }
 
-body > nav a:hover{
+body > nav a, 
+body > nav a:visited{
+    display: block;
+    color: var(--link-nav-main-color);
+    padding-left: 1rem;
+}
+
+body > nav a:hover, 
+body > nav a:focus{
     background-color: var(--link-nav-main-color);
     color: var(--main-nav-bg);
+    outline:0;
 }
 
 body > main > section > article{
     padding: 1rem 0.5rem;
+}
+
+article table{
+    border-collapse: collapse;
+}
+
+article table td,
+article table th{
+    border: 1px solid var(--site-general-color);
 }
 
 /* 
