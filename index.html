@@ -298,20 +298,25 @@ rerum molestiae et!
                     <h2>Media : vidéo hébergée</h2>
                 </header>
                 <p>
-                    Les media vidéo et audio quand ils sont hébergés sur le site sont affichés à l'aide des balises <code class="balise">video</code> et <code class="balise">audio</code>
+                    Les media vidéo et audio quand ils sont hébergés sur le site sont affichés à l'aide des balises
+                    <code class="balise">video</code> et <code class="balise">audio</code>
                 </p>
                 <h3>La balise <code class="balise">video</code></h3>
                 <p>
                     Plusieurs façons de l'utiliser, ici on présente les deux principales
                 </p>
                 <p>
-                    On peut utiliser directement la balise <code class="balise">viedo</code> avec l'attribut src à l'intérieur.
+                    On peut utiliser directement la balise <code class="balise">viedo</code> avec l'attribut src à
+                    l'intérieur.
                 </p>
                 <figure>
-                    <video src="./media/video/Fallout-4-Launch-Trailer.mp4" controls poster="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" muted></video>
+                    <video src="./media/video/Fallout-4-Launch-Trailer.mp4" controls
+                        poster="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" muted></video>
                 </figure>
                 <p>
-                    Si on veut proposer plusieurs formats de vidéo, afin de s'adapté au navigateur et / ou la bande passante des visiteurs, il est possible de définir plusieurs source de vidéos grace àla balise <code class="balise">source /</code>
+                    Si on veut proposer plusieurs formats de vidéo, afin de s'adapté au navigateur et / ou la bande
+                    passante des visiteurs, il est possible de définir plusieurs source de vidéos grace àla balise <code
+                        class="balise">source /</code>
                 </p>
                 <figure>
                     <video controls muted preload="auto">
@@ -327,7 +332,8 @@ rerum molestiae et!
                         La balise <code class="balise">audio</code> fonctionne comme la balise vidéo.
                     </p>
                     <figure>
-                        <img src="./images/diablo_02.jpg" alt="Impression écran jeu diablo quand le personnage d'adresse à Cain l'ancien" />
+                        <img src="./images/diablo_02.jpg"
+                            alt="Impression écran jeu diablo quand le personnage d'adresse à Cain l'ancien" />
                         <audio src="./media/audio/diablo_town.mp3" preload="auto" controls></audio>
                         <figcaption>
                             <button id="playDiablo">Lecture / pause</button>
@@ -342,14 +348,16 @@ rerum molestiae et!
                     <h2>Les iframes</h2>
                 </header>
                 <p>
-                    L'iframe est un cadre défini, qui permet d'afficher à l'intérieur un document (page web, vidéo, pdf, txt, etc.)
+                    L'iframe est un cadre défini, qui permet d'afficher à l'intérieur un document (page web, vidéo, pdf,
+                    txt, etc.)
                 </p>
                 <ul>
                     <li><a href="./documents/CRAM.pdf" target="documents">Cram.pdf</a></li>
                     <li><a href="./documents/books.xml" target="documents">Books.xml</a></li>
                 </ul>
                 <figure class="ratio ratio-a4-portrait">
-                    <iframe name="documents" width="100%" height="300" src="./documents/A4-portrait-hex-0.5-inches-paper.pdf"></iframe>
+                    <iframe name="documents" width="100%" height="300"
+                        src="./documents/A4-portrait-hex-0.5-inches-paper.pdf"></iframe>
                 </figure>
             </article>
             <article>
@@ -357,16 +365,154 @@ rerum molestiae et!
                     <h2>Media : vidéos hébregées sur un site tier</h2>
                 </header>
                 <p>
-                    Les sites de streaming - vidéo (youtube, dailymotion, viméo, etc.) propose les partage de leurs vidéos. Pour ce faire il fournissent la plupart du temps un bout de code html contenant une iframe et un lien vers la ressources sur une partie patageable du site.
+                    Les sites de streaming - vidéo (youtube, dailymotion, viméo, etc.) propose les partage de leurs
+                    vidéos. Pour ce faire il fournissent la plupart du temps un bout de code html contenant une iframe
+                    et un lien vers la ressources sur une partie patageable du site.
                 </p>
                 <h3>youtube</h3>
                 <figure class="ratio ratio-16x9">
-                    <iframe src="https://www.youtube.com/embed/HJWFsZ_YUc4?si=VWRL_43zq__rIw9P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/HJWFsZ_YUc4?si=VWRL_43zq__rIw9P"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
                 </figure>
                 <h3>Dailymotion</h3>
                 <figure class="ratio ratio-16x9">
-                    <iframe frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x2ehnj" width="100%" height="100%" allowfullscreen title="Dailymotion Video Player" ></iframe>
+                    <iframe frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x2ehnj"
+                        width="100%" height="100%" allowfullscreen title="Dailymotion Video Player"></iframe>
                 </figure>
+            </article>
+        </section>
+        <section>
+            <article>
+                <header>
+                    <h2>Les formulaires</h2>
+                </header>
+                <p>
+                    Les formulaires servent a récupérer des informations pour traitement, par exemple,
+                    un serveur php qui pourra les enregistrer en fichier, en bdd, ou les envoyer par mail
+                </p>
+                <p>
+                    Un formulaire se déclare à l'aide de la balise <code class="balise">form</code>. Il possède des
+                    attributs,
+                    dont les plus courants et importants sont : method & action
+                </p>
+                <h3>method</h3>
+                <p>
+                    méthode d'envoi des informations du formulaire, il en existe deux :
+                </p>
+                <ul>
+                    <li>GET : les données sont envoyées associées à des
+                        noms de variables dans l'url de la page de traitement</li>
+                    <li>POST : Les données sont transmises en variables dans
+                        l'entête HTTP.
+                    </li>
+                </ul>
+                <p>
+                    Si la méthode n'est pas indiquée dans le formulaire,
+                    c'est GET qui sera utilisé par défaut
+                </p>
+                <h3>Action</h3>
+                <p>
+                    Indique l'url de la page de traitement des données envoyées par le formulaire.
+                    Si action n'est pas précisé, le formulaire considère que c'est la page où il
+                    se trouve qui sera la page de traitement.
+                </p>
+                <h3>Un exemple de formulaire</h3>
+                <form method="get" action="./test/test.html">
+                    <fieldset>
+                        <legend>
+                            Vos coordonnées :
+                        </legend>
+                        <p>
+                            <label for="nom">
+                                Nom :
+                            </label>
+                            <input type="text" name="nom" id="nom" required placeholder="Votre nom ici"
+                                aria-describedby="nomAide" autofocus />
+                        </p>
+                        <div class="form-help" id="nomAide">
+                            Entrez votre nom dans ce champ. Il est obligatoire.
+                        </div>
+                        <p>
+                            <label for="prenom">
+                                Prénom :
+                            </label>
+                            <input type="text" name="prenom" id="prenom" placeholder="Votre prénom ici"
+                                aria-describedby="prenomAide" />
+                        </p>
+                        <div class="form-help" id="prenomAide">
+                            Entrez votre prénom dans ce champ.
+                        </div>
+                        <p>
+                            <label for="email">
+                                Email :
+                            </label>
+                            <input type="email" name="email" id="email" required placeholder="Votre email ici"
+                                aria-describedby="emailAide" />
+                        </p>
+                        <div class="form-help" id="emailAide">
+                            Entrez votre email dans ce champ. il est obligatoire.
+                        </div>
+                        <p>
+                            <label for="tel">
+                                Téléphone :
+                            </label>
+                            <input type="tel" name="tel" id="tel" placeholder="Votre téléphone ici ici"
+                                aria-describedby="telAide" />
+                        </p>
+                        <div class="form-help" id="telAide">
+                            Entrez votre numéro de téléphone dans ce champ.
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>
+                            Votre demande de contact
+                        </legend>
+                        <p>
+                            <label for="type-demande">Type de la demande</label>
+                            <select name="type-demande" id="type-demande" aria-describedby="type-demAide">
+                                <optgroup label="Nos produits">
+                                    <option value="sav-produit">SAV sur un produit</option>
+                                    <option value="info-produit">Informations sur un produit</option>
+                                </optgroup>
+                                <optgroup label="Nos prestations">
+                                    <option value="sav-presta">SAV sur une prestationt</option>
+                                    <option value="info-presta">Informations sur une prestation</option>
+                                    <option selected value="devis-presta">Devis pour une prestation</option>
+                                </optgroup>
+                            </select>
+                        </p>
+                        <div class="form-help" id="type-demAide">
+                            Veuillez sélectionner le type de demande désiré
+                        </div>
+                        <p>
+                            <label>Votre tranche d'âge :</label><br />
+                            <input type="radio" name="age" value="-15" aria-describedby="ageAide" /> <label>Moins de 15 ans</label><br />
+                            <input type="radio" name="age" value="15-25" aria-describedby="ageAide" checked/> <label>Entre 15 et 25 ans</label><br />
+                            <input type="radio" name="age" value="26-36" aria-describedby="ageAide" /> <label>Entre 26 et 39 ans</label><br />
+                            <input type="radio" name="age" value="40+" aria-describedby="ageAide" /> <label>40 ans ou plus</label><br />
+                        </p>
+                        <div class="form-help" id="ageAide">
+                            La tranche d'âge nous permet de mieux cibler les propositions ultérieures.
+                        </div>
+                        <p>
+                            <label>Format désiré de la réponse</label><br />
+                            <input type="checkbox" aria-describedby="reponseAide" name="contactTel" disabled> <label>Par téléphone</label><br />
+                            <input type="checkbox" aria-describedby="reponseAide" name="contactEmail" checked> <label>Par email</label>
+                        </p>
+                        <div class="form-help" id="reponseAide">
+                            Veuillez choisir au moins un format de réponse sinon on ne vous contactera pas.
+                        </div>
+                        <p>
+                            <label for="message">Description de votre demande</label><br />
+                            <textarea cols="45" rows="45" name="message" id="message" placeholder="Décrire votre demande ici"></textarea>
+                        </p>
+                    </fieldset>
+                    <p>
+                        <button type="submit">Envoyer la demande</button>
+                    </p>
+                </form>
             </article>
         </section>
     </main>
