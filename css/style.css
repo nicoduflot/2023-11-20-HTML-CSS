@@ -69,6 +69,7 @@ ATTENTION : les imports de fichiers CSS dans un autre fichier CSS doivent être 
 
 @import url('./BebasNeueRegular.css');
 @import url('./roboto.css');
+@import url('./bootstrap-icons.css');
 
 /* Déclaration root */
 
@@ -184,6 +185,11 @@ code.balise::after{
     left:0px;
     top:0px;
     overflow:hidden;
+}
+
+.form-help::before{
+    font-family: 'bootstrap-icons';
+    content: "\F430";
 }
 
 /* déclarations de structure */
