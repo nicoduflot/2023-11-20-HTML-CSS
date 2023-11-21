@@ -239,6 +239,26 @@ rerum molestiae et!
                 <code class="balise">img src="./images/monimage.png" alt="Image d'exemple de la balise img" /</code>
             </p>
             <img src="./images/synthwave-vibe-james-white-signalnoise.jpg" alt="Image au style synthwave, un motard devant sa moto, au fond, un couché de soleil type des posters de films des années 80" />
+            <p>
+                Avec HTML5, une balise conteneur existe pour apporter un meilleur référencement aux images ayant un contexte particulier.
+            </p>
+            <figure>
+                <img src="./images/huitieme-couleur.jpg" alt="Couverture du roman poche “la huitième couleure” de l'écrivain Terry Pratchett" />
+                <figcaption>
+                    Le premier roman de la série du disque-monde par l'auteur Terry Pratchett.
+                </figcaption>
+            </figure>
+            <p>
+                Il est possible de gérer un adaptatif évolutif, au lieu d'avoir le CSS qui réduit une grande image, on peut choisir d'afficher une image d'une certaine taille selon la largeur d'écran disponible. Avec des images moins lourde pour chaque taille, on améliore la rapidité de chargement.
+            </p>
+            <picture>
+                <source srcset="./images/synthwave-vibe-james-white-signalnoise-w1000.png" media="(min-width: 1100px)" />
+                <source srcset="./images/synthwave-vibe-james-white-signalnoise-w800.png" media="(min-width: 900px)" />
+                <source srcset="./images/synthwave-vibe-james-white-signalnoise-w600.png" media="(min-width: 700px)" />
+                <source srcset="./images/synthwave-vibe-james-white-signalnoise-w400.png" media="(min-width: 500px)" />
+                <source srcset="./images/synthwave-vibe-james-white-signalnoise-w300.png" media="(min-width: 360px)" />
+                <img src="./images/synthwave-vibe-james-white-signalnoise-w300.png" alt="Image au style synthwave, un motard devant sa moto, au fond, un couché de soleil type des posters de films des années 80" />
+            </picture>
         </section>
     </main>
     <footer>
