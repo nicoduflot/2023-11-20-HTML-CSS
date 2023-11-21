@@ -72,6 +72,10 @@ a:hover{
     color: var(--link-main-color-hover);
 }
 
+img{
+    max-width: 100%;
+}
+
 /* déclaration de classes */
 
 .content-width{
@@ -91,6 +95,14 @@ a:hover{
 .fit-table{
     width: 100%;
     overflow-x: scroll;
+}
+
+code.balise::before{
+    content: "<";
+}
+
+code.balise::after{
+    content: ">";
 }
 
 /* déclarations de structure */
