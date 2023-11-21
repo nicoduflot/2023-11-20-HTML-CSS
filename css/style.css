@@ -24,9 +24,16 @@ si 2em = 32 px, 1em = 16px
     font-family: var(--font-family);
     font-size: 1.1rem;
     line-height: 1.5rem;
-    --link-main-color: darkred;
+    --link-main-color: #A62100;
     --link-main-color-hover: black;
-    --link-nav-main-color: white;
+    --link-nav-main-color: #A62100;
+    --site-bg-general: #F2F2F2;
+    --site-general-color: #333333;
+    --header-bg: #FFC112;
+    --header-title-color: #A62100;
+    --main-nav-bg: var(--header-bg);
+    color: var(--site-general-color);
+    background-color: var(--site-bg-general);
 }
 
 /* déclarations générales */
@@ -35,6 +42,10 @@ si 2em = 32 px, 1em = 16px
 *::before,
 *::after{
     box-sizing: border-box;
+}
+
+h1{
+    color: var(--header-title-color);
 }
 
 h1,
@@ -86,10 +97,31 @@ a:hover{
 body{
     margin: 0;
 }
+
+body > header{
+    background-color: var(--header-bg);
+}
+
+body > nav{
+    background-color: var(--main-nav-bg);
+}
+
 /* body > nav > div > ul */
 body > nav ul{
+    margin: 0;
     list-style-type: none;
     padding-inline-start: 0;
+    line-height: 2.2rem;
+}
+
+body > nav a{
+    display: block;
+    color: var(--link-nav-main-color);
+}
+
+body > nav a:hover{
+    background-color: var(--link-nav-main-color);
+    color: var(--main-nav-bg);
 }
 
 body > main > section > article{
