@@ -68,13 +68,14 @@ ATTENTION : les imports de fichiers CSS dans un autre fichier CSS doivent être 
 */
 
 @import url('./BebasNeueRegular.css');
+@import url('./roboto.css');
 
 /* Déclaration root */
 
 :root{
     /* root permet de surcharger le comportement par défaut du navigateur */
     /* css permet d'utiliser des variable, et elles peuvent êtrz géréeet / ou précalculée dans le root */
-    --font-family: Arial, Helvetica, sans-serif;
+    --font-family: 'Roboto', Arial, Helvetica, sans-serif;
     --heading-font: 'BebasNeue';
     font-family: var(--font-family);
     font-size: 1.1rem;
