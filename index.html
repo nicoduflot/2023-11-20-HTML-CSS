@@ -382,6 +382,15 @@ rerum molestiae et!
                         width="100%" height="100%" allowfullscreen title="Dailymotion Video Player"></iframe>
                 </figure>
             </article>
+            <article>
+                <header>
+                    <h2>Media intégré : audio</h2>
+                </header>
+                <h3>
+                    Ex : soundcloud
+                </h3>
+                <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1465583221&color=%239a1e4f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/lizzomusic" title="Lizzo" target="_blank" style="color: #cccccc; text-decoration: none;">Lizzo</a> · <a href="https://soundcloud.com/lizzomusic/sets/special-387954109" title="Special" target="_blank" style="color: #cccccc; text-decoration: none;">Special</a></div>
+            </article>
         </section>
         <section>
             <article>
@@ -486,8 +495,8 @@ rerum molestiae et!
                         <div class="form-help" id="type-demAide">
                             Veuillez sélectionner le type de demande désiré
                         </div>
-                        <p>
-                            <label>Votre tranche d'âge :</label><br />
+                        <p class="form-check">
+                            <span>Votre tranche d'âge :</span><br />
                             <input type="radio" name="age" value="-15" aria-describedby="ageAide" /> <label>Moins de 15 ans</label><br />
                             <input type="radio" name="age" value="15-25" aria-describedby="ageAide" checked/> <label>Entre 15 et 25 ans</label><br />
                             <input type="radio" name="age" value="26-36" aria-describedby="ageAide" /> <label>Entre 26 et 39 ans</label><br />
@@ -496,17 +505,17 @@ rerum molestiae et!
                         <div class="form-help" id="ageAide">
                             La tranche d'âge nous permet de mieux cibler les propositions ultérieures.
                         </div>
-                        <p>
-                            <label>Format désiré de la réponse</label><br />
+                        <p class="form-check">
+                            <span>Format désiré de la réponse</span><br />
                             <input type="checkbox" aria-describedby="reponseAide" name="contactTel" disabled> <label>Par téléphone</label><br />
                             <input type="checkbox" aria-describedby="reponseAide" name="contactEmail" checked> <label>Par email</label>
                         </p>
                         <div class="form-help" id="reponseAide">
                             Veuillez choisir au moins un format de réponse sinon on ne vous contactera pas.
                         </div>
-                        <p>
+                        <p class="form-text">
                             <label for="message">Description de votre demande</label><br />
-                            <textarea cols="45" rows="45" name="message" id="message" placeholder="Décrire votre demande ici"></textarea>
+                            <textarea name="message" id="message" placeholder="Décrire votre demande ici"></textarea>
                         </p>
                     </fieldset>
                     <p>

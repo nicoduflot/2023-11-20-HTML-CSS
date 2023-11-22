@@ -79,7 +79,8 @@ ATTENTION : les imports de fichiers CSS dans un autre fichier CSS doivent être 
     --font-family: 'Roboto', Arial, Helvetica, sans-serif;
     --heading-font: 'BebasNeue';
     font-family: var(--font-family);
-    font-size: 1.1rem;
+    --general-font-size: 1.1rem;
+    font-size: var(--general-font-size);
     line-height: 1.5rem;
     --link-main-color: #A62100;
     --link-main-color-hover: black;
@@ -91,6 +92,7 @@ ATTENTION : les imports de fichiers CSS dans un autre fichier CSS doivent être 
     --main-nav-bg: var(--header-bg);
     color: var(--site-general-color);
     background-color: var(--site-bg-general);
+    --border-radius: 0.3rem;
 }
 
 /* déclarations générales */
@@ -192,6 +194,46 @@ code.balise::after{
     content: "\F430";
 }
 
+article form{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+article form label, 
+article form textarea{
+    width: 100%;
+}
+
+article form textarea{
+    height: 20vh;
+    font-size: var(--general-font-size);
+    border-radius: var(--border-radius);
+    border-style: solid;
+}
+
+article form select{
+    height: 2rem;
+    border-radius: var(--border-radius);
+    border-style: solid;
+}
+
+article form fieldset{
+    border-radius: var(--border-radius);
+    border-style: solid;
+}
+
+article form input[type="text"],
+article form input[type="email"],
+article form input[type="tel"],
+article form select{
+    width: 100%;
+    line-height: 2rem;
+    font-size: var(--general-font-size);
+    border-radius: var(--border-radius);
+    border-style: solid;
+}
+
 /* déclarations de structure */
 
 body{
@@ -204,6 +246,15 @@ body > header{
 
 body > nav{
     background-color: var(--main-nav-bg);
+}
+
+body > main,
+body > header > *,
+body > nav > *,
+body > footer > *{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* body > nav > div > ul */
@@ -249,3 +300,100 @@ article table th{
 déclarations adaptatives (responsive ou RWD responsive web design) 
 media queries
 */
+
+@media (min-width: 576px){
+    body > main,
+    body > header > *,
+    body > nav > *,
+    body > footer > *{
+        width: 540px;
+    }
+
+    article form p:not(p.form-check):not(.form-text){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    article form label{
+        width: 30%;
+    }
+
+    article form input[type="text"],
+    article form input[type="email"],
+    article form input[type="tel"],
+    article form select{
+        width: 70%;
+    }
+
+    .form-check{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .form-check span{
+        width: 100%
+    }
+
+    .form-check label{
+        width: 40%;
+        text-align: end;
+        margin-right: 20%;
+    }
+
+    .form-check input{
+        margin-left: 20%;
+    }
+
+}
+
+@media (min-width: 768px){
+    body > main,
+    body > header > *,
+    body > nav > *,
+    body > footer > *{
+        width: 720px;
+    }
+
+    article form{
+        width: calc( 720px - 1rem );
+    }
+}
+
+@media (min-width: 992px){
+    body > main,
+    body > header > *,
+    body > nav > *,
+    body > footer > *{
+        width: 960px;
+    }
+}
+
+@media (min-width: 1200px){
+    body > main,
+    body > header > *,
+    body > nav > *,
+    body > footer > *{
+        width: 1140px;
+    }
+}
+
+@media (min-width: 1400px){
+    body > main,
+    body > header > *,
+    body > nav > *,
+    body > footer > *{
+        width: 1320px;
+    }
+}
+
+@media (min-width: 1600px){
+    body > main,
+    body > header > *,
+    body > nav > *,
+    body > footer > *{
+        width: 1560px;
+    }
+}
