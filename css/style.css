@@ -357,6 +357,19 @@ media queries
         width: 720px;
     }
 
+    main section{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    main section > *{
+        width: 50%;
+    }
+
+    main section > *:first-child:last-child{
+        width: 100%;
+    }
+
     article form{
         width: calc( 720px - 1rem );
     }
@@ -378,6 +391,11 @@ media queries
     body > footer > *{
         width: 1140px;
     }
+
+    main section > *{
+        width: 33%;
+    }
+
 }
 
 @media (min-width: 1400px){
