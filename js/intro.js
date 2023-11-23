@@ -374,3 +374,65 @@ cars.splice(1, 0, lastEntry, firstEntry, removed[0], removed[1], removed[2], rep
 console.log(cars);
 
 /* comment créer une copie d'un tableau ? */
+/*
+let carsClone = cars;
+*/
+
+/* 
+.slice() permet de copier une ou plusieurs valeurs d'un tableau renvoyées sous forme de tableau
+*/
+
+let carsClone = cars.slice(2, 7);
+console.log(cars);
+console.log(carsClone);
+carsClone.pop();
+console.log(cars);
+console.log(carsClone);
+
+carsClone.sort();
+console.log(carsClone);
+carsClone.reverse();
+console.log(carsClone);
+
+let tabExemple = '123.5, 12, 54.3'.split(',');
+console.log(tabExemple);
+let chaineExemple = [123.5, 12, 54.3].join(';');
+console.log(chaineExemple);
+
+let unMot = 'toto';
+unMot = unMot.split('').reverse().join('');
+console.log(unMot);
+
+/* et les tableaux à deux dimension ? */
+
+let tab2d = [
+    [0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0]
+];
+
+console.table(tab2d);
+tab2d[0][3] = 1;
+console.table(tab2d);
+
+let tab2d2 = [
+    [12, 23, 56],
+    ['toto', 'tata'],
+    [21, 32, 45, ['titi']]
+];
+
+console.table(tab2d2);
+
+carsTest = [ 
+    ['Fiat', 1996], 
+    ['Kya', 1995], 
+    ['Kya', 1990], 
+    ['Ford', 1950]
+];
+
+console.table(carsTest);
+carsTest.sort();
+console.table(carsTest);
