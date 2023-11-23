@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap - B A - BA</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <script src="./js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="./css/bs-style.css" />
+</head>
+
+<body>
+    <header class="bg-dark text-white py-3">
+        <div class="container">
+            <h1>Bootstrap : la base</h1>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html" title="Page d'accueil"><i class="bi bi-house"></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbar-main" aria-controls="navbar-main" aria-expanded="false"
+                aria-label="Ouvre / ferme la navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-main">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./bootstrap.html" title="Lien vers la page faîte avec bootstrap">Bootstrap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./cssgrid.html" title="lien vers les grilles en CSS">Grilles CSS</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!--
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-secondary" type="submit">
+                        Search
+                    </button>
+                </form>
+                -->
+            </div>
+        </div>
+    </nav>
+    <main class="container">
+        <section class="row my-1">
+            <div class="row my-1">
+                <div class="my-1">
+                    <article>
+                        <header>
+                            <h2>Article</h2>
+                        </header>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem
+                            beatae porro fugit architecto repudiandae blanditiis impedit, id
+                            repellat odit tempora! Saepe, similique accusantium? Impedit a
+                            nesciunt corporis atque, esse aut? Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Tempora nihil dolorum ipsum
+                            deserunt quos dolore placeat unde, perspiciatis laboriosam nobis
+                            fugiat id perferendis, vero blanditiis dolor quia, corporis
+                            sequi totam!
+                        </p>
+                    </article>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3 my-1">
+                <article class="card">
+                    <img class="card-img-top" src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" />
+                    <header class="card-header">
+                        <h2>Article</h2>
+                    </header>
+                    <div class="card-body">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem
+                            beatae porro fugit architecto repudiandae blanditiis impedit, id
+                            repellat odit tempora! Saepe, similique accusantium? Impedit a
+                            nesciunt corporis atque, esse aut? Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Tempora nihil dolorum ipsum
+                            deserunt quos dolore placeat unde, perspiciatis laboriosam nobis
+                            fugiat id perferendis, vero blanditiis dolor quia, corporis
+                            sequi totam!
+                        </p>
+                    </div>
+                    <footer class="card_footer">
+                        <button class="btn">Lire +</button>
+                    </footer>
+                </article>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3 my-1">
+                <article class="card">
+                    <img class="card-img-top" src="./images/diablo_02.jpg" />
+                    <header class="card-header">
+                        <h2>Article</h2>
+                    </header>
+                    <div class="card-body">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem
+                            beatae porro fugit architecto repudiandae blanditiis impedit, id
+                            repellat odit tempora! Saepe, similique accusantium? Impedit a
+                            nesciunt corporis atque, esse aut? Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Tempora nihil dolorum ipsum
+                            deserunt quos dolore placeat unde, perspiciatis laboriosam nobis
+                            fugiat id perferendis, vero blanditiis dolor quia, corporis
+                            sequi totam!
+                        </p>
+                    </div>
+                    <footer class="card_footer">
+                        <button class="btn">Lire +</button>
+                    </footer>
+                </article>
+            </div>
+            <div class="col-sm-12 col-lg-4 col-xl-6 my-1">
+                <aside>
+                    <header>
+                        <h2>Titre</h2>
+                    </header>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+                        suscipit quae adipisci, minima ducimus, nisi illum nulla ipsam
+                        iure illo voluptates et repudiandae officiis inventore in
+                        provident? Architecto, earum autem?
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Consequuntur unde ab, eveniet a reprehenderit porro veniam nemo
+                        animi voluptate molestiae nesciunt, provident dolorum voluptas
+                        aperiam sint facere officia! Repudiandae, autem.
+                    </p>
+                    <table class="table table-striped table-dark">
+                        <thead>
+                            <tr>
+                                <th>Année</th>
+                                <th>Groupe</th>
+                                <th>Album</th>
+                                <th>Style</th>
+                                <th>cover</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1993</td>
+                                <td>Angra</td>
+                                <td>Angels cry</td>
+                                <td>Power Metal</td>
+                                <td>
+                                    <img class="img-thumbnail" src="./images/albums/Angra_angels_cry.jpg" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1991</td>
+                                <td>Nirvana</td>
+                                <td>Nevermind</td>
+                                <td>Grunge</td>
+                                <td>
+                                    <img class="img-thumbnail" src="./images/albums/nirvana-nevermind-cover.jpg" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2022</td>
+                                <td>Florence and the machine</td>
+                                <td>Dance Fever</td>
+                                <td>Indie Rock</td>
+                                <td>
+                                    <img class="img-thumbnail"
+                                        src="./images/albums/florence-and-the-machine-dance-fever.jpg" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2021</td>
+                                <td>Alice Phoebe Lou</td>
+                                <td>Glow</td>
+                                <td>Folk</td>
+                                <td>
+                                    <img class="img-thumbnail" src="./images/albums/alice-phoebe-lou-glow-cover.jpg" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1995</td>
+                                <td>Radiohead</td>
+                                <td>The Bends</td>
+                                <td>Brit Rock</td>
+                                <td>
+                                    <img class="img-thumbnail" src="./images/albums/radiohead-the-bends-cover.jpg" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </aside>
+            </div>
+        </section>
+        <section class="row my-1">
+            <div class="col-6 my-1">
+                <aside class="card">
+                    <header class="card-header">Aside 1</header>
+                </aside>
+            </div>
+            <div class="col-6 my-1">
+                <aside class="card">
+                    <header class="card-header">Aside 2</header>
+                </aside>
+            </div>
+        </section>
+        <section class="row my-1">
+            <div class="col my-1">
+                <aside class="card">
+                    <header class="card-header">Aside 3</header>
+                </aside>
+            </div>
+            <div class="col-6 my-1">
+                <aside class="card">
+                    <header class="card-header">Aside 4</header>
+                </aside>
+            </div>
+            <div class="col my-1">
+                <aside class="card">
+                    <header class="card-header">Aside 5</header>
+                </aside>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-dark text-white py-3">
+        <div class="container">
+            <p>
+                &copy; DAWAN 11-2023
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+@import url('./BebasNeueRegular.css');
+@import url('./bootstrap-icons.css');
+@import url('./roboto.css');
+:root{
+    --bs-font-sans-serif: "Roboto", system-ui, -apple-system, "Segoe UI", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1{
+    font-family: 'BebasNeue';
+}

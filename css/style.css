@@ -357,16 +357,30 @@ media queries
         width: 720px;
     }
 
+    body > nav ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    body > nav ul li:not(body > nav ul li:last-child){
+        border-bottom: unset;
+        border-right: 1px solid var(--link-nav-main-color);
+    }
+
+    body > nav a, body > nav a:visited{
+        padding-right: 1rem;
+    }
+
     main section{
         display: flex;
         flex-wrap: wrap;
     }
 
-    main section > *{
+    main section > *:not(.grid-div){
         width: 50%;
     }
 
-    main section > *:first-child:last-child{
+    main section > *:first-child:last-child:not(.grid-div){
         width: 100%;
     }
 
@@ -392,7 +406,7 @@ media queries
         width: 1140px;
     }
 
-    main section > *{
+    main section > *:not(.grid-div){
         width: 33%;
     }
 
