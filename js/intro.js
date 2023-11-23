@@ -139,3 +139,45 @@ créer deux variables nombre et afficher
     var1 puissance var2
 */
 
+const a = 42;
+const b = 66;
+console.log(`a = ${a}`);
+console.log(`b = ${b}`);
+console.log(`${a} + ${b} = ${a + b}`);
+console.log(`${a} - ${b} = ${a - b}`);
+console.log(`${a} * ${b} = ${a * b}`);
+console.log(`${a} / ${b} = ${a / b}`);
+console.log(`${a} % ${b} = ${a % b}`);
+console.log(`${a}**${b} = ${a**b}`);
+
+/**
+ * 
+ *      Opérateurs de comparaison
+ *      
+ *      < strictement inférieur à
+ *      >    "        supérieur à
+ *      <= inférieur ou égal
+ *      >= supérieur ou égal
+ *      
+ *      == égalité non stricte (compare la valeur)
+ *      === égalité stricte (compare valeur et type)
+ *      
+ *      '2' == 2 => vrai
+ *      '2' === 2 => faux
+*/
+
+const c = 1;
+const d = '1';
+console.log(c == d); // en valeur 1 == '1' => vrai
+console.log(c === d); // en aleur ET en type 1 !== '1' => faux
+
+/**
+ *      
+ *      !=  différence non stricte (compare la valeur)
+ *      !==  différence stricte (compare valeur et type)
+ *      
+ *      '2' != 2 => faux
+ *      '2' !== 2 => vrai
+ * 
+*/
+
