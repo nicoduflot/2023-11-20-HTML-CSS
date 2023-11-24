@@ -58,5 +58,18 @@ document.addEventListener('DOMContentLoaded', function(){
         });
     });
 
+    const imgPipBoy = document.querySelector('#imgOver');
+    imgPipBoy.addEventListener('mouseenter', function(){
+        this.setAttribute('src', './images/pip-boy-thumb-up.png');
+        this.setAttribute('alt', 'Pip boy avec le bras droit');
+        this.nextElementSibling.innerHTML = 'Pip boy sans le bras droit';
+    });
+    
+    imgPipBoy.addEventListener('mouseleave', function(){
+        this.setAttribute('src', './images/pip-boy-thumb-down.png');
+        this.setAttribute('alt', 'Pip boy sans le bras droit');
+        this.nextElementSibling.innerHTML = 'Pip boy avec le bras droit';
+        
+    });
 
 });
