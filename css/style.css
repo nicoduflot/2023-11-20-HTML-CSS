@@ -209,6 +209,10 @@ p#spanP{
     margin: 0.5rem;
 }
 
+.biffer{
+    text-decoration:line-through;
+}
+
 /* déclarations de structure */
 
 body{

@@ -1,8 +1,8 @@
 console.log('début du chargement de la page');
 /* 
-La page (document) une fois chargée, renvoi l'événement DOMContentLoaded, si on ajoute un écouteur d'événement à la page sur cet événement, la fonction de rappel à l'intérieur se jouera uniquement une fois tous les éléments de la page chargés
+Quand la page (document) une fois chargée, le navigateur renvoi l'événement DOMContentLoaded, si on ajoute un écouteur d'événement à la page sur cet événement, la fonction de rappel à l'intérieur se jouera uniquement une fois tous les éléments de la page chargés
 */
-document.addEventListener('DOMContentLoaded', function(){
+window.addEventListener('DOMContentLoaded', function(){
     /* 
     je peux récupérer un élément dans la page et le lier à une variable ou une constante 
     Ici j'utilise querySelector, qui me permet de ne récupérer qu'un seul élément correspondant au sélécteur CSS indiqué

@@ -15,7 +15,7 @@
         }
     </style>
     <link rel="stylesheet" href="./css/style.css" media="screen" />
-    <script src="./js/dom.js"></script>
+    <script src="./js/dataset.js"></script>
 </head>
 
 <body>
@@ -58,43 +58,84 @@
         <section>
             <article>
                 <header>
-                    <h2>D.O.M. Document Object Model</h2>
+                    <h2>Les attributs data- (dataset)</h2>
                 </header>
-                <p>
-                    le <b>DOM</b> nous permet de repérer, analyser, modifier et supprimer des éléments de la page HTML
-                </p>
-                <p>
-                    Il y a un "arbre" des éléments, (idem pour le XML)
-                </p>
-                <p class="special">
-                    Il faut que tous les éléments de la page soient chargés pour que l'on puisse les repérer, modifier et aussi ajouter des éléments.
-                </p>
-                <h3>Agir sur le DOM</h3>
-                <ul>
-                    <li>Connaître l'élément surveillé du DOM, de la page</li>
-                    <li>Connaître l'événement écouté : le déclencheur</li>
-                </ul>
-                <p>
-                    <button id="testP" class="testez-moi">
-                        Tester les paragraphes
-                    </button>
-                </p>
-                <div id="showP">
-
-                </div>
+                Les attributs data- sont des attributs HTML dynamiques. Ce qui est
+                dynamique : leurs noms et les valeurs qu'ils possèdent. Pour les
+                utiliser, on crée dans la balise un attribut avec la forme suivante :
+                <code>data-*="..."</code>, * sera le nom du dataset, ... sa valeur.
+                par exemple <br />
+                <code>
+            &lt;img data-over="../images/test.png" src="../images/test-img.png"
+            data-test="test" /&gt; </code><br />
+                pour atteindre ce dataset : <br />
+                <code>
+            let urlOver =
+            document.querySelector('img[data-over][data-test="test"]').dataset.over;
+          </code>
             </article>
+        </section>
+        <section>
             <article>
                 <header>
-                    <h2>Quelques autres événements</h2>
+                    <h2>Utiliser un switch</h2>
                 </header>
-                <h3>mouseenter & mouseleave</h3>
-                <p>
-                    <figure>
-                        <img id="imgOver" src="./images/pip-boy-thumb-down.png" alt="Pip boy sans le bras droit" />
-                        <figcaption>
-                            Pip boy sans le bras droit
-                        </figcaption>
-                    </figure>
+                <hr />
+                <p data-module="color">
+                    Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit.
+                    Sed, quidem! Quod sapiente consequatur
+                    eius in officia ducimus nisi, totam quo
+                    vitae voluptate, quasi rerum! Debitis
+                    aliquid aliquam et suscipit ab!
+                </p>
+                <p data-module="color" data-color="#09f">
+                    Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit.
+                    Sed, quidem! Quod sapiente consequatur
+                    eius in officia ducimus nisi, totam quo
+                    vitae voluptate, quasi rerum! Debitis
+                    aliquid aliquam et suscipit ab!
+                </p>
+                <p data-module="color" data-color="orange">
+                    Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit.
+                    Sed, quidem! Quod sapiente consequatur
+                    eius in officia ducimus nisi, totam quo
+                    vitae voluptate, quasi rerum! Debitis
+                    aliquid aliquam et suscipit ab!
+                </p>
+                <p data-module="font" data-weight="bold">
+                    Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit.
+                    Sed, quidem! Quod sapiente consequatur
+                    eius in officia ducimus nisi, totam quo
+                    vitae voluptate, quasi rerum! Debitis
+                    aliquid aliquam et suscipit ab!
+                </p>
+                <p data-module="magie">
+                    Lorem ipsum dolor sit amet,
+                    consectetur adipisicing &nbsp;elit.
+                    Sed, quidem! Quod sapiente consequatur
+                    eius in officia ducimus nisi, totam quo
+                    vitae voluptate, quasi rerum! Debitis
+                    aliquid aliquam et suscipit ab!
+                </p>
+                <p data-module="after">
+                    Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit.
+                    Sed, quidem! Quod sapiente consequatur
+                    eius in officia ducimus nisi, totam quo
+                    vitae voluptate, quasi rerum! Debitis
+                    aliquid aliquam et suscipit ab!
+                </p>
+                <p data-module="toto">
+                    Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit.
+                    Sed, quidem! Quod sapiente consequatur
+                    eius in officia ducimus nisi, totam quo
+                    vitae voluptate, quasi rerum! Debitis
+                    aliquid aliquam et suscipit ab!
                 </p>
             </article>
             <article>
@@ -106,9 +147,7 @@
                         Ajouter un span dans le paragraphe suivant
                     </button>
                 </p>
-                <p id="spanP">
-
-                </p>
+                <p id="spanP"></p>
             </article>
             <article>
                 <header>
@@ -133,9 +172,7 @@
         </section>
     </main>
     <footer>
-        <div>
-            &copy; DAWAN - Novembre 2023
-        </div>
+        <div>&copy; DAWAN - Novembre 2023</div>
         <div>
             <nav>
                 <h3>Sitemap</h3>
@@ -184,6 +221,7 @@
     </footer>
 </body>
 <script>
-    console.log('fin du chargement de la page');
+    console.log("fin du chargement de la page");
 </script>
+
 </html>
