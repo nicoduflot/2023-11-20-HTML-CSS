@@ -69,7 +69,42 @@ document.addEventListener('DOMContentLoaded', function(){
         this.setAttribute('src', './images/pip-boy-thumb-down.png');
         this.setAttribute('alt', 'Pip boy sans le bras droit');
         this.nextElementSibling.innerHTML = 'Pip boy avec le bras droit';
-        
+    });
+
+    let cptSpan = 0;
+    document.querySelector('#addSpan').addEventListener('click', function(e){
+        e.stopPropagation();
+        cptSpan = cptSpan + 1;
+        /* création d'un élément span */
+        const span = document.createElement('span');
+        /* si besoin ajouter un ou plusieurs attributs, classes, etc au span */
+        span.classList.add('testSpan', 'toto');
+        /* ajouter le n°du span à l'élément */
+        const content = document.createTextNode(`span n°${cptSpan}`);
+        /* ajouter le noeud de texte au span */
+        span.appendChild(content);
+        /* ajouter un écouteur d'événement au span */
+        span.addEventListener('click', function(event){
+            event.stopPropagation();
+            this.remove();
+        });
+        /* ajouter l'élément au paragraphe */
+        document.querySelector('#spanP').appendChild(span);
+        console.log(span);
+    });
+
+    const allDocs = document.querySelectorAll('a[data-url][data-target]');
+    console.log(allDocs);
+    allDocs.forEach(function(link){
+        link.addEventListener('click', function(event){
+            event.preventDefault();
+            /*
+            console.log(link.dataset);
+            console.log(link.dataset.url);
+            console.log(link.dataset.target);
+            */
+            document.querySelector(`iframe[name="${link.dataset.target}"]`).setAttribute('src', link.dataset.url);
+        });
     });
 
 });

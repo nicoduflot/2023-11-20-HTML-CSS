@@ -194,44 +194,19 @@ code.balise::after{
     content: "\F430";
 }
 
-article form{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+p#spanP{
+    display: flex;
+    flex-wrap: wrap;
 }
 
-article form label, 
-article form textarea{
-    width: 100%;
-}
 
-article form textarea{
-    height: 20vh;
-    font-size: var(--general-font-size);
-    border-radius: var(--border-radius);
-    border-style: solid;
-}
-
-article form select{
-    height: 2rem;
-    border-radius: var(--border-radius);
-    border-style: solid;
-}
-
-article form fieldset{
-    border-radius: var(--border-radius);
-    border-style: solid;
-}
-
-article form input[type="text"],
-article form input[type="email"],
-article form input[type="tel"],
-article form select{
-    width: 100%;
-    line-height: 2rem;
-    font-size: var(--general-font-size);
-    border-radius: var(--border-radius);
-    border-style: solid;
+.testSpan{
+    border: 3px solid #6aa241;
+    width: 150px;
+    height: 50px;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
 }
 
 /* déclarations de structure */
@@ -285,6 +260,46 @@ body > nav a:focus{
 
 body > main > section > article{
     padding: 1rem 0.5rem;
+}
+
+article form{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+article form label, 
+article form textarea{
+    width: 100%;
+}
+
+article form textarea{
+    height: 20vh;
+    font-size: var(--general-font-size);
+    border-radius: var(--border-radius);
+    border-style: solid;
+}
+
+article form select{
+    height: 2rem;
+    border-radius: var(--border-radius);
+    border-style: solid;
+}
+
+article form fieldset{
+    border-radius: var(--border-radius);
+    border-style: solid;
+}
+
+article form input[type="text"],
+article form input[type="email"],
+article form input[type="tel"],
+article form select{
+    width: 100%;
+    line-height: 2rem;
+    font-size: var(--general-font-size);
+    border-radius: var(--border-radius);
+    border-style: solid;
 }
 
 article table{
