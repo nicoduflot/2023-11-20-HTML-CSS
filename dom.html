@@ -15,7 +15,7 @@
         }
     </style>
     <link rel="stylesheet" href="./css/style.css" media="screen" />
-    <link rel="stylesheet" href="./css/grid.css" media="screen" />
+    <script src="./js/dom.js"></script>
 </head>
 
 <body>
@@ -52,25 +52,45 @@
         </div>
     </nav>
     <main>
-        <section class="grille">
-            <div class="grid-div" id="div-1">01</div>
-            <div class="grid-div" id="div-2">02</div>
-            <div class="grid-div" id="div-3">03</div>
-            <div class="grid-div" id="div-4">04</div>
-            <div class="grid-div" id="div-5">05</div>
-            <div class="grid-div" id="div-6">06</div>
-            <div class="grid-div" id="div-7">07</div>
-            <div class="grid-div" id="div-8">08</div>
-            <div class="grid-div" id="div-9">09</div>
-            <div class="grid-div" id="div-10">10</div>
-            <div class="grid-div" id="div-11">11</div>
-            <div class="grid-div" id="div-12">12</div>
-            <div class="grid-div" id="div-13">13</div>
-            <div class="grid-div" id="div-14">14</div>
-            <div class="grid-div" id="div-15">15</div>
-            <div class="grid-div" id="div-16">16</div>
-            <div class="grid-div" id="div-17">17</div>
-            <div class="grid-div" id="div-18">18</div>
+        <section>
+            <article>
+                <header>
+                    <h2>D.O.M. Document Object Model</h2>
+                </header>
+                <p>
+                    le <b>DOM</b> nous permet de repérer, analyser, modifier et supprimer des éléments de la page HTML
+                </p>
+                <p>
+                    Il y a un "arbre" des éléments, (idem pour le XML)
+                </p>
+                <p class="special">
+                    Il faut que tous les éléments de la page soient chargés pour que l'on puisse les repérer, modifier et aussi ajouter des éléments.
+                </p>
+                <h3>Agir sur le DOM</h3>
+                <ul>
+                    <li>Connaître l'élément surveillé du DOM, de la page</li>
+                    <li>Connaître l'événement écouté : le déclencheur</li>
+                </ul>
+                <p>
+                    <button id="testP" class="testez-moi">
+                        Tester les paragraphes
+                    </button>
+                </p>
+                <div id="showP">
+
+                </div>
+            </article>
+            <article>
+                <header>
+                    <h2>La destructuration</h2>
+                </header>
+                <p>
+                    C'est un mode d'assignation de variables et d'objets
+                </p>
+                <p>
+                    Tout est dans le code et la console
+                </p>
+            </article>
         </section>
     </main>
     <footer>
@@ -113,7 +133,7 @@
                     <li>
                         <a href="./fonction.html" title="Lien vers les fonctions javascript">JS Fonctions</a>
                     </li>
-                    <li>
+                    <li data-test="tata">
                         <a href="./dom.html" title="Lien vers la manipulation du DOM">JS DOM</a>
                     </li>
                 </ul>
@@ -121,5 +141,7 @@
         </div>
     </footer>
 </body>
-
+<script>
+    console.log('fin du chargement de la page');
+</script>
 </html>

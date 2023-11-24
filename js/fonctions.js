@@ -104,3 +104,18 @@ console.log(`d : ${d}, f : ${f}, g : ${g}`);
 
 const [h, i, j, k = 0, l = 5] = liste;
 console.log(`h : ${h}, i : ${i}, j : ${j}, k : ${k}, l : ${l}`);
+
+/* utilisé pour l'échange de données entre variables */
+let val01 = 12;
+let val02 = 55;
+
+console.log(`avant échange val01 : ${val01}, val02 : ${val02}`);
+/*
+let valTampon = val01;
+val01 = val02;
+val02 = valTampon;
+*/
+
+[val01, val02] = [val02, val01];
+
+console.log(`après échange val01 : ${val01}, val02 : ${val02}`);
