@@ -15,7 +15,7 @@
         }
     </style>
     <link rel="stylesheet" href="./css/style.css" media="screen" />
-    <link rel="stylesheet" href="./css/grid.css" media="screen" />
+    <script src="./js/ajax.js"></script>
 </head>
 
 <body>
@@ -58,31 +58,95 @@
         </div>
     </nav>
     <main>
-        <section class="grille">
-            <div class="grid-div" id="div-1">01</div>
-            <div class="grid-div" id="div-2">02</div>
-            <div class="grid-div" id="div-3">03</div>
-            <div class="grid-div" id="div-4">04</div>
-            <div class="grid-div" id="div-5">05</div>
-            <div class="grid-div" id="div-6">06</div>
-            <div class="grid-div" id="div-7">07</div>
-            <div class="grid-div" id="div-8">08</div>
-            <div class="grid-div" id="div-9">09</div>
-            <div class="grid-div" id="div-10">10</div>
-            <div class="grid-div" id="div-11">11</div>
-            <div class="grid-div" id="div-12">12</div>
-            <div class="grid-div" id="div-13">13</div>
-            <div class="grid-div" id="div-14">14</div>
-            <div class="grid-div" id="div-15">15</div>
-            <div class="grid-div" id="div-16">16</div>
-            <div class="grid-div" id="div-17">17</div>
-            <div class="grid-div" id="div-18">18</div>
+        <section>
+            <article>
+                <header>
+                    <h2>AJAX : Asynchronous Javascript And Xml</h2>
+                </header>
+                <p>
+                    Pour utiliser ajax avec js, sans regarder du côté des fonctions 
+                    type fetch, il faut instancier une objet de type XmlHttpRequest (XHR). 
+                    En code ça donnait
+                </p>
+                <textarea style="width: 100%;height: 400px;" disabled>var xhr = null;
+// vérification du navigateur : supporte-t'il ajax
+if(window.XMLHttpRequest || window.ActiveXObject){
+    //le navigateur supporte ajax
+    if(window.ActiveXObject){
+        //navigateur microsoft type ie
+        try{
+            xhr = new ActiveXobject("Msxml2.XMLHTTP");
+        }catch(e){
+            xhr = new ActiveXobject("Microsoft.XMLHTTP");
+        }
+    }else{
+        //pas IE
+        xhr = new XmlHttpRequest();
+    }
+}else{
+    //pas d'ajax
+    alert("votre navigateur ne supporte pas l'objet XMLHttpRequest");
+    return;
+}</textarea>
+                <p>
+                    Cette fonction est étudiée pour prendre en compte les divers navigateurs et 
+                    leurs compatibilité avec XHR
+                </p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <header>
+                    <h2>Fetch</h2>
+                </header>
+                <p>
+                    fetch est la façon récente (2015) d'aller rechercher des flux de données sur une ressource exterieur.
+                </p>
+                <p>
+                    <code>
+                        fetch( 'adresse internet de la ressource' )<br />
+                        .then( function(reponse){ <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;/* .then récupère le flux de données renvoyé par fetch */<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;return reponse.json(); <br />
+                        })<br />
+                        .then( function(data){ <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;/* ici, .then récupère dans la variable data le return du .then précédent*/<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;/*code du traitement des données */<br />
+                        })<br />
+                        .catch( function(error){ <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;/* si lefetch ou les then précédents osont en erreur, on la récupère ici dans la variable error*/<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;/*code du traitement de l'erreur*/<br />
+                        })<br />
+                        .finally( function(){<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;/* que le fetch ai réussi ou non, le code de .finally sera éxécuté */<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;/* code a exécuter après la tentative réussie ou non de fetch*/<br />
+                        });
+
+                    </code>
+                </p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <header>
+                    <h2>Utiliser Fetch</h2>
+                </header>
+                <hr />
+                <p>
+                    <button data-type="json" data-url="./ressources/bdd.json">BDD</button>
+                    <button data-type="json" data-url="./ressources/comments.json">Comments</button>
+                    <button data-type="json" data-url="./ressources/posts.json">posts</button>
+                    <button data-type="json" data-url="./ressources/users.json">users</button>
+                    <button data-type="json" data-url="https://jsonplaceholder.typicode.com/todos">Todo sur jsonplaceholder</button>
+                </p>
+                <div id="resultats">
+
+                </div>
+            </article>
         </section>
     </main>
     <footer>
-        <div>
-            &copy; DAWAN - Novembre 2023
-        </div>
+        <div>&copy; DAWAN - Novembre 2023</div>
         <div>
             <nav>
                 <h3>Sitemap</h3>
@@ -133,5 +197,8 @@
         </div>
     </footer>
 </body>
+<script>
+    console.log("fin du chargement de la page");
+</script>
 
 </html>
